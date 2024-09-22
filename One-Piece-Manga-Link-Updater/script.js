@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
             pathParts[pathParts.length - 1] = chapterNumber;
             url.pathname = pathParts.join('-');
 
-            // Redirect to the new URL automatically
+            // Update the link href with the new URL
+            link.href = url.href;
+
+            // Redirect to the new URL
             window.location.href = url.href;
         } else {
             console.error('Invalid chapter number in URL');
